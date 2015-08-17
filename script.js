@@ -25,7 +25,7 @@ $(document).ready(function() {
       dataType: "json"
     }).done(function(response){
       var weather = response.current_observation
-      $("#data").append("<p> Temperature in " + weather.display_location.full + ": " + weather.temperature_string + "</p>")
+      $("#data").prepend("<p> Temperature in " + weather.display_location.full + ": " + weather.temperature_string + "</p>")
     }).fail(function(){
       alert("Something went wrong, try again.")
     })
